@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html data-theme="cupcake">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Information</title>
+    <link href="/css/styles.css" rel="stylesheet">
+</head>
+
+<body class="h-screen">
+    <%- include('components/navbar.ejs') %>
+        <div class="container mx-auto pt-4">
+            <div class="card shadow-lg compact bg-base-100">
+                <div class="card-body">
+                    <h2 class="card-title">Insert Information</h2>
+                    <form action="/insert" method="POST">
+                        <!-- First Name -->
+                        <div class="form-control mb-4">
+                            <label class="label">
+                                <span class="label-text">First Name</span>
+                            </label>
+                            <input type="text" name="firstname" placeholder="First Name"
+                                class="input input-bordered w-full" required>
+                        </div>
+
+                        <!-- Last Name -->
+                        <div class="form-control mb-4">
+                            <label class="label">
+                                <span class="label-text">Last Name</span>
+                            </label>
+                            <input type="text" name="lastname" placeholder="Last Name"
+                                class="input input-bordered w-full" required>
+                        </div>
+
+                        <!-- Age -->
+                        <div class="form-control mb-4">
+                            <label class="label">
+                                <span class="label-text">Age</span>
+                            </label>
+                            <input type="number" name="age" placeholder="Age" class="input input-bordered w-full"
+                                required>
+                        </div>
+
+                        <!-- Gender -->
+                        <div class="form-control mb-4">
+                            <label class="label">
+                                <span class="label-text">Gender</span>
+                            </label>
+                            <select name="gender" class="select select-bordered w-full">
+                                <option value="ชาย">ชาย</option>
+                                <option value="หญิง">หญิง</option>
+                                <option value="ไม่ระบุ">ไม่ระบุ</option>
+                            </select>
+                        </div>
+
+                        <!-- Interests -->
+                        <div class="form-control mb-4">
+                            <label class="label">
+                                <span class="label-text">Interests</span>
+                            </label>
+                            <input type="text" name="interests" placeholder="Interests"
+                                class="input input-bordered w-full">
+                        </div>
+
+                        <!-- Description -->
+                        <div class="form-control mb-4">
+                            <label class="label">
+                                <span class="label-text">Description</span>
+                            </label>
+                            <textarea name="description" class="textarea textarea-bordered w-full"
+                                placeholder="Description"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-control mt-6">
+                            <button type="submit" class="btn btn-primary w-full">Insert</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
